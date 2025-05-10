@@ -1,0 +1,399 @@
+/*---------- colors ----------*/
+:root {
+	--black: #2D2D2A;
+	--gray: #4C4C47;
+	--white: #E5DCC5;
+	--blue: #848FA5;
+	--red: #C14953;
+}
+
+
+
+
+
+/*---------- general style ----------*/
+body {
+	background-color: var(--black);
+	font-family: 'Syncopate', sans-serif;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+
+
+
+/*---------- navigation ----------*/
+#nav-links a:visited { color: var(--white); }
+#nav-links a:active { color: var(--white); }
+#nav-links a:link {
+	color: var(--white);
+	text-decoration: none;
+}
+.navHead {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1%;
+	z-index: 1000;
+	background-color: var(--black);
+	/*border: 3px solid #fff;*/
+}
+.navLogo {
+	width: 80px;
+}
+.navLinks {
+	flex: 1;
+	font-size: 15px;
+	text-align: right;
+	color: var(--white);
+	text-transform: uppercase;
+}
+.navLinks ul li {
+	display: inline-block;
+	list-style-type: none;
+	text-decoration: none;
+	padding: 8px 25px 8px 10px;
+}
+
+
+.navLinks ul li::after {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: var(--blue);
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+.navLinks ul li:hover::after {
+	width: 100%;
+}
+
+
+
+
+/*---------- landing page ----------*/
+.textBox1 {
+	/*background-color: var(--black);*/
+	/*color: var(--white);*/
+	color: var(--white);
+	margin: 100px auto auto auto;
+	width: 90vw;
+	height: 50vh;
+	text-align: left;
+	align-items: center;
+	padding: 2%;
+	text-transform: uppercase;
+}
+.textBox1 h1 {
+	margin: 0;
+	font-size: 5rem;
+	font-weight: bold;
+}
+.textBox1 p {
+	position: relative;
+	margin-top: 0;
+	font-size: 2rem;
+}
+.heroBtn {
+	width: 150px;
+	height: 50px;
+	background-color: var(--red);
+	color: var(--black); 
+	margin-top: 60px;
+	border: 3px solid var(--white);
+	border-radius: 10px;
+	font-size: 1.2rem;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+}
+.heroBtn:hover {
+	background-color: var(--blue);
+	transition: 0.3s;
+}
+
+
+/*---------- about page ----------*/
+.about {
+	/*background-color: var(--blue);*/
+	/*color: var(--white);*/
+	color: var(--white);
+	margin: 100px auto auto auto;
+	width: 90vw;
+	height: 60vh;
+	text-align: left;
+	align-items: center;
+	padding: 2%;
+	text-transform: uppercase;
+}
+.about h2 {
+	font-size: 3rem;
+}
+.line {
+	background-color: var(--red);
+	width: 30vw;
+	height: 3px;
+	position: absolute; 
+	top: 20%;
+	left: 40px;
+}
+
+
+
+
+/*---------- contact page ----------*/
+.contact {
+	/*background-color: var(--blue);*/
+	/*color: var(--white);*/
+	color: var(--white);
+	margin: 100px auto auto auto;
+	width: 90vw;
+	height: 60vh;
+	text-align: left;
+	align-items: center;
+	padding: 2%;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.contact h2 {
+	font-size: 3rem;
+}
+
+.gridContainer {
+	display: grid;
+	gap: 15px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 100px 100px 100px;
+	font-family: 'Lato', sans-serif;
+	font-size: 30px;
+}
+
+
+.box1 {
+	position: relative;
+	border: 3px solid var(--red);
+	grid-column: span 2;
+	text-align: center;
+	justify-content: center;
+	
+}
+.box1:hover {
+	background-color: var(--blue);
+	border: none;
+	transition: 0.3s;
+}
+.box p { padding-top: 20px; }
+.box1 .info {
+	text-decoration: none;
+	color: var(--black);
+	text-transform: lowercase;
+	display: none; 
+}
+.box1:hover .info {
+	display: block; 
+	text-decoration: none;
+}
+.box1:hover .title { display: none; }
+
+
+
+.box2 {
+	position: relative;
+	border: 3px solid var(--red);
+	grid-column: span 2;
+	text-align: center;
+	justify-content: center;
+	padding: auto;
+}
+.box2:hover {
+	background-color: var(--blue);
+	border: none;
+	transition: 0.3s;
+}
+.box2 .info {
+	text-transform: lowercase;
+	display: none; 
+	color: var(--black);
+}
+.box2:hover .info { display: block; }
+.box2:hover .title { display: none; }
+
+
+
+
+.box3 {
+	position: relative;
+	border: 3px solid var(--red);
+	grid-column: span 2;
+	text-align: center;
+	justify-content: center;
+	padding: auto;
+}
+.box3:hover {
+	background-color: var(--blue);
+	border: none;
+	transition: 0.3s;
+}
+.box3 .info {
+	text-transform: lowercase;
+	display: none; 
+	color: var(--black);
+}
+.box3:hover .info { display: block; }
+.box3:hover .title { display: none; }
+
+
+
+
+
+
+
+/*---------- work page ----------*/
+
+.work {
+	/*background-color: var(--blue);*/
+	/*color: var(--white);*/
+	color: var(--white);
+	margin: 100px auto auto auto;
+	width: 90vw;
+	/*height: 60vh;*/
+	text-align: left;
+	align-items: center;
+	padding: 2%;
+	text-transform: uppercase;
+}
+.work h2 {
+	font-size: 3rem;
+}
+
+
+.grid-container {
+	width: 90vw;
+	margin: auto auto;
+	/*background-color: var(--blue);*/
+	display: grid;
+	gap: 15px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	cursor: pointer;
+	z-index: 1;
+}
+
+
+.project1 {
+	border: 3px solid var(--black);
+	align-items: center;
+	justify-content: center;
+}
+.project1:hover {
+	box-shadow: 0px 4px 8px var(--blue);
+}
+.project1 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.5;
+}
+.project1 img:hover {
+	opacity: 1;
+}
+
+
+
+
+
+.project2 {
+	border: 3px solid var(--black);
+}
+.project2:hover {
+	box-shadow: 0px 4px 8px var(--blue);
+}
+.project2 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.5;
+}
+.project2 img:hover {
+	opacity: 1;
+}
+
+
+
+.project3 {
+	border: 3px solid var(--black);
+}
+.project3:hover {
+	box-shadow: 0px 4px 8px var(--blue);
+}
+.project3 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.5;
+}
+.project3 img:hover {
+	opacity: 1;
+}
+
+
+
+.project4 {
+	border: 3px solid var(--black);
+}
+.project4:hover {
+	box-shadow: 0px 4px 8px var(--blue);
+}
+.project4 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.5;
+}
+.project4 img:hover {
+	opacity: 1;
+}
+
+
+
+
+.project5 {
+	border: 3px solid var(--black);
+}
+.project5:hover {
+	box-shadow: 0px 4px 8px var(--blue);
+}
+.project5 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.5;
+}
+.project5 img:hover {
+	opacity: 1;
+}
+
+
+
+
+.project6 {
+	border: 3px solid var(--black);
+}
+.project6:hover {
+	box-shadow: 0px 4px 8px var(--blue);
+}
+.project6 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.5;
+}
+.project6 img:hover {
+	opacity: 1;
+}
