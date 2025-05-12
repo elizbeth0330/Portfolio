@@ -18,10 +18,15 @@ body {
 	margin: 0;
 	padding: 0;
 	cursor: pointer;
+	font-size: 15px;
 }
 
 
-
+@media screen and (max-width: 600px) {
+.textBox1 {
+	font-size: 9px;
+}
+}
 
 /*---------- navigation ----------*/
 #nav-links a:visited { color: var(--white); }
@@ -93,7 +98,7 @@ nav {
 }
 .textBox1 h1 {
 	margin: 0;
-	font-size: 5rem;
+	font-size: 3rem;
 	font-weight: bold;
 }
 .textBox1 p {
